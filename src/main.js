@@ -4,12 +4,13 @@ import 'izitoast/dist/css/iziToast.min.css';
 /* END*/
 
 /* Імпорт функцій */
-import { lightbox } from './js/render-functions.js';
 import { getImagesByQuery } from './js/pixabay-api.js';
-import { createGallery } from './js/render-functions.js';
-import { clearGallery } from './js/render-functions.js';
-import { showLoader } from './js/render-functions.js';
-import { hideLoader } from './js/render-functions.js';
+import {
+  createGallery,
+  clearGallery,
+  showLoader,
+  hideLoader,
+} from './js/render-functions.js';
 /* END */
 
 /* Змінні */
@@ -39,7 +40,6 @@ form.addEventListener('submit', event => {
       }
 
       createGallery(data.hits, gallery);
-      lightbox.refresh();
     })
     .catch(error => {
       console.error(error);
