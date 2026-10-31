@@ -1,32 +1,109 @@
-:root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.form {
+  display: flex;
+  column-gap: 8px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.form input {
+  width: 272px;
+  padding: 8px 16px;
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  outline: none;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.25s linear;
 }
 
-body {
+.form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+
+.form input:hover {
+  border-color: #000000;
+}
+
+.form input:focus {
+  border-color: #4e75ff;
+}
+
+.form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
+  border: none;
+  transition: background-color 0.25s linear;
+}
+
+.form button:hover {
+  background-color: #6c8cff;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
   display: flex;
   flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-  margin: 0;
+  width: calc((100% - 54px) / 4);
+  border: 1px solid #808080;
 }
 
-main {
-  flex-grow: 1;
+.img-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 20px;
+  column-gap: 20px;
 }
-main:has(.back-link) {
-  text-align: center;
+
+.img-info h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.img-info li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-info p {
+  font-size: 16px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.gallery-item a {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
